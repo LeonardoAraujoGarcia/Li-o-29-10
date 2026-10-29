@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f6f2" />
+  <title>Cadastro de empresa</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./java.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#cadastro" aria-label="Cadastro de empresa, início"><span class="brand-mark" aria-hidden="true">C</span><span>Cadastro<span class="brand-light"> empresarial</span></span></a>
+      <span class="topbar-note">REGISTRO DE EMPRESA</span>
+    </header>
+    <section class="form-panel" id="form-panel" aria-labelledby="page-title">
+      <div class="intro"><p class="eyebrow">NOVO REGISTRO <span></span> 01 / 01</p><h1 id="page-title">Dados da empresa</h1><p class="intro-copy">Preencha as informações para concluir o cadastro.</p></div>
+      <form id="company-form" novalidate>
+        <div class="fields-grid">
+          <label class="field field-wide" for="company-name"><span>Nome da empresa</span><input id="company-name" name="companyName" autocomplete="organization" placeholder="Ex.: Horizonte Serviços Ltda." required /></label>
+          <label class="field field-wide" for="address"><span>Endereço</span><input id="address" name="address" autocomplete="street-address" placeholder="Rua, número, bairro, cidade e estado" required /></label>
+          <label class="field" for="phone"><span>Fone de contato</span><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999" required /></label>
+          <label class="field" for="cnpj"><span>CNPJ</span><input id="cnpj" name="cnpj" inputmode="text" autocomplete="off" placeholder="00.000.000/0000-00" maxlength="18" aria-describedby="cnpj-hint" required /><span class="field-hint" id="cnpj-hint">Aceita CNPJ numérico ou alfanumérico.</span></label>
+          <label class="field" for="state-registration"><span>Inscrição Estadual (IE)</span><input id="state-registration" name="stateRegistration" autocomplete="off" placeholder="Número da inscrição" required /></label>
+          <label class="field" for="responsible-person"><span>Responsável pela empresa</span><input id="responsible-person" name="responsiblePerson" autocomplete="name" placeholder="Nome completo" required /></label>
+        </div>
+        <div class="form-footer"><span class="required-note"><span aria-hidden="true">*</span> Todos os campos são obrigatórios</span><button class="primary-button" type="submit">Enviar cadastro <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+    <section class="result-panel" id="result-panel" aria-live="polite" aria-labelledby="result-title" hidden>
+      <div class="result-symbol" id="result-symbol" aria-hidden="true"></div>
+      <p class="eyebrow" id="result-eyebrow"></p><h1 id="result-title"></h1><p class="result-copy" id="result-copy"></p>
+      <button class="secondary-button" id="back-button" type="button"><span aria-hidden="true">←</span> Voltar ao formulário</button>
+    </section>
+    <footer class="page-footer"><span>CADASTRO EMPRESARIAL</span><span>Validação local do CNPJ</span></footer>
+  </main>
+</body>
+</html>
